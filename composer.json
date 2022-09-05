@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "HAOC\\Logstash": "src/"
+      "HAOC\\Logstash\\": "src/"
     }
   },
   "require": {
