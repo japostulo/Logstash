@@ -1,0 +1,19 @@
+{
+  "name": "haoc/logstash",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "João Apostulo Neto",
+      "email": "japostulo@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "HAOC\\Logstash": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0"
+  }
+}
