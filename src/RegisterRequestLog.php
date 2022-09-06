@@ -33,7 +33,7 @@ class RegisterRequestLog
     private function getRequestProperties(Request $request)
     {
         $requestProperties = [
-            'route_name' => $request->route()->getName(),
+            'route_name' => $request?->route()?->getName(),
             'uri' => $request->path(),
             'method' => $request->getMethod(),
             'ip' => $request->ip()
@@ -51,7 +51,7 @@ class RegisterRequestLog
     {
         $user =  $request->user();
 
-        if (!$user->exists) return [];
+        if (!$user->exists) return null;
 
         return [
             'id' => $user->identifier,

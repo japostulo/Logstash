@@ -34,11 +34,12 @@ class UsageFormatter extends NormalizerFormatter
 
         $this->setLogProperties($record, $message);
 
-        $this->setLevelProperties($record, $message);
-
         if (!empty($record['extra'])) $message[$this->extraKey] = $record['extra'];
 
         $this->setContext($record['context'], $message);
+
+        $this->setLevelProperties($record, $message);
+
         $message['index'] = $this->getIndex();
 
         return $this->toJson($message) . "\n";
